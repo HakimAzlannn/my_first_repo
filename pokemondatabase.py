@@ -22,11 +22,11 @@ option = st.sidebar.selectbox(
 if option=='Attribute':
     ## Sidebar - Type 1 selection
     Type_1 = ['Grass','Fire','Water','Bug','Normal','Poison','Electric','Ground','Fairy','Fighting','Psychic','Rock','Ice','Dragon','Dark','Ghost','Steel']
-    type_1_selection = st.sidebar.multiselect('Type', Type_1, Type_1)
+    type_1_selection = st.multiselect('Type', Type_1, Type_1)
 
     # Sidebar - Legendary selection
     Legendarytype = sorted(pkmndata.Legendary.unique())
-    selected_legendary = st.sidebar.multiselect('Legendary', Legendarytype, Legendarytype)
+    selected_legendary = st.multiselect('Legendary', Legendarytype, Legendarytype)
 
     overallpkmndata = newpkmndata[(pkmndata.Legendary.isin(selected_legendary)) & (pkmndata.Type1.isin(type_1_selection))]
     st.write('Data Dimension: ' + str(overallpkmndata.shape[0]) + ' rows and ' + str(overallpkmndata.shape[1]) + ' columns.')
