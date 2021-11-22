@@ -36,12 +36,12 @@ else:
     min_speed = int(newpkmndata['Speed'].min())
     max_speed = int(newpkmndata['Speed'].max())
     
-    min_hp = int(newpkmndata['Hp'].min())
-    max_hp = int(newpkmndata['Hp'].max())
+    min_hp = int(newpkmndata['HP'].min())
+    max_hp = int(newpkmndata['HP'].max())
     
     'By HP'
-    Hp = st.sidebar.slider('Hp', min_hp, max_hp)
-    newpkmndata[newpkmndata['Hp'] == Hp]
+    Hp = st.sidebar.slider('HP', min_hp, max_hp)
+    newpkmndata[newpkmndata['HP'] == Hp]
     
     'By speed'
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
