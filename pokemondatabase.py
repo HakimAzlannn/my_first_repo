@@ -39,10 +39,15 @@ else:
     min_hp = int(newpkmndata['HP'].min())
     max_hp = int(newpkmndata['HP'].max())
     
-    'By HP'
-    Hp = st.sidebar.slider('HP', min_hp, max_hp)
-    newpkmndata[newpkmndata['HP'] == Hp]
+    def user_input_features():
+        Hp = st.sidebar.slider('HP', min_hp, max_hp)
+        speed = st.sidebar.slider('Speed', min_speed, max_speed)
+        data = {'HP': Hp,
+                'Speed': speed}
+        features = pd.DataFrame(data, index=[0])
+        return features
+
+    df = user_input_features()
     
-    'By speed'
-    speed = st.sidebar.slider('Speed', min_speed, max_speed)
-    newpkmndata[newpkmndata['Speed'] == speed]
+    st.subheader('Pokemon database')
+    st.write(df)
