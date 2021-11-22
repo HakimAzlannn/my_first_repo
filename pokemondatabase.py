@@ -42,9 +42,7 @@ else:
     def user_input_features():
         Hp = st.sidebar.slider('HP', min_hp, max_hp)
         speed = st.sidebar.slider('Speed', min_speed, max_speed)
-        data = {'Name': Name,
-                'HP': Hp,
-                'Speed': speed}
+        data = newpkmndata[newpkmndata['HP'] == Hp] & newpkmndata[newpkmndata['Speed'] == speed]
         features = pd.DataFrame(data, index=[0])
         return features
 
