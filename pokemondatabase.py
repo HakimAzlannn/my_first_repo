@@ -37,4 +37,4 @@ else:
     max_speed = int(newpkmndata['Speed'].max())
     'By speed'
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
-    newpkmndata2[newpkmndata['Speed'] == speed]
+    newpkmndata2[newpkmndata2['Speed'] == speed]
