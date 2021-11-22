@@ -33,5 +33,3 @@ st.markdown("""
 You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
-
-pkmn_name = input("\nPlease enter your pokemon's name:\n")
