@@ -29,14 +29,8 @@ overallpkmndata = newpkmndata[(pkmndata.Legendary.isin(selected_legendary)) & (p
 st.write('Data Dimension: ' + str(overallpkmndata.shape[0]) + ' rows and ' + str(overallpkmndata.shape[1]) + ' columns.')
 st.dataframe(overallpkmndata)
 
-
-@st.cache
-def get_data():
-    return pd.read_csv(newpkmndata)
-
-df = get_data()
-min_speed = int(df['Speed'].min())
-max_speed = int(df['Speed'].max())
+min_speed = int(pkmndata['Speed'].min())
+max_speed = int(pkmndata['Speed'].max())
 '# By speed'
 speed = st.slider('Speed', min_speed, max_speed)
-df[df['Speed'] == speed]
+pkmndata[pkmndata['Speed'] == speed]
