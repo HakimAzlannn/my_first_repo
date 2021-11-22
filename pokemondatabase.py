@@ -8,7 +8,7 @@ st.title('Pokemon Database')
 ## Commenting on apps
 st.markdown("""
 This app shows pokemon stats!
-*Feel free to look for your suitable pokemon!
+* Feel free to look for your suitable pokemon!
 * **Pokemon database reference:** [Click here](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6)
 """)
 
