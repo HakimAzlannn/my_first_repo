@@ -15,6 +15,7 @@ pkmndata = pd.read_csv('pokemon.csv')
 ## Drop column
 newpkmndata = pkmndata.drop(['#', 'Total','Generation','Legendary','Type1','Type2'], axis = 1)
 
+## Sidebar - option
 option = st.sidebar.selectbox(
     'Select your choice',
      ['Attribute','Status'])
@@ -41,5 +42,9 @@ else:
  
     Hp = st.sidebar.slider('HP', min_hp, max_hp)
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
+    
+    'By HP'
     newpkmndata[newpkmndata['HP'] == Hp]
+    
+    'By Speed'
     newpkmndata[newpkmndata['Speed'] == speed]
