@@ -34,4 +34,5 @@ You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
 pkmn_name = st.text_input('pokemon.csv')
-st.dataframe(pkmn_name)
+df = pd.read_csv(pkmn_name)
+st.dataframe(df)
