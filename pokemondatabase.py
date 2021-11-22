@@ -14,7 +14,8 @@ pkmndata = pd.read_csv('pokemon.csv')
 
 ## Drop column
 newpkmndata = pkmndata.drop(['#', 'Total','Generation','Legendary','Type1','Type2'], axis = 1)
-newpkmndata2 = newpkmndata.drop(['Speed','Defense','Attack','Hp'], axis = 1)
+newpkmndata2 = pkmndata.drop(['#', 'Total','Generation','Legendary','Type1','Type2','Speed','Defense','Attack','Hp'], axis = 1)
+
 option = st.sidebar.selectbox(
     'Select your choice',
      ['Attribute','Status'])
