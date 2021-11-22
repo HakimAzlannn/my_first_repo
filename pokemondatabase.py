@@ -28,12 +28,3 @@ selected_legendary = st.sidebar.multiselect('Legendary', Legendarytype, Legendar
 overallpkmndata = newpkmndata[(pkmndata.Legendary.isin(selected_legendary)) & (pkmndata.Type1.isin(type_1_selection))]
 st.write('Data Dimension: ' + str(overallpkmndata.shape[0]) + ' rows and ' + str(overallpkmndata.shape[1]) + ' columns.')
 st.dataframe(overallpkmndata)
-
-st.markdown("""
-You can use the sidebar button!
-* Also you can search your pokemon here!
-""")
-pkmn_name = st.text_input('Your pokemon')
-st.write(pd.DataFrame({
-        pkmn_name:pd.read_csv(pkmndata)
-        }))
