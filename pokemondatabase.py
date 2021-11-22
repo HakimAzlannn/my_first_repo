@@ -44,7 +44,9 @@ else:
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
     
     'By HP'
-    newpkmndata[newpkmndata['HP'] == Hp]
+    data = newpkmndata[newpkmndata['HP'] == Hp]
+    st.write('Data Dimension: ' + str(data.shape[0]) + ' rows and ' + str(data.shape[1]) + ' columns.')
+    st.dataframe(data)
     
     'By Speed'
     newpkmndata[newpkmndata['Speed'] == speed]
