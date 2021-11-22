@@ -34,12 +34,4 @@ You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
 
-while True:
-  pkmn_name = input("\nPlease enter your pokemon's name:\n")
-  
-    try:
-        pkmn_name = str(pkmn_name)
-        break
-    
-    except ValueError:
-        print("Sorry, no such pokemon")
+pkmn_name = input("\nPlease enter your pokemon's name:\n")
