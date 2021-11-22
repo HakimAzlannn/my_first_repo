@@ -6,7 +6,7 @@ st.title('Pokemon Database')
 
 st.markdown("""
 This app shows the stats of pokemon!
-* **Data source:** [Pokemon database](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6).
+* **Pokemon database reference:** [Click here](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6).
 """)
 
 st.sidebar.header('Pokemon Attribute')
@@ -31,5 +31,5 @@ st.dataframe(overallpkmndata)
 
 st.markdown("""
 You can use the sidebar button!
-Also you can search your pokemon here!
+* Also you can search your pokemon here!
 """)
