@@ -34,4 +34,7 @@ You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
 pkmn_name = st.text_input('Your pokemon')
-st.write(pkmndata[pkmn_name])
+st.write(pd.DataFrame({
+        'Intplan': ['yes', 'yes', 'yes', 'no'],
+        'Churn Status': [0, 0, 0, 1]
+        }))
