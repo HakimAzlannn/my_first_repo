@@ -2,20 +2,22 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+## Set title
 st.title('Pokemon Database')
 
+## Commenting on apps
 st.markdown("""
-This app shows the stats of pokemon!
+This app shows pokemon stats! Feel free to use the sidebar button.
 * **Pokemon database reference:** [Click here](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6)
 """)
 
-# Upload file
+## Upload file
 pkmndata = pd.read_csv('pokemon.csv')
 
 ## Drop column
 newpkmndata = pkmndata.drop(['#', 'Total','Generation','Legendary','Type1','Type2'], axis = 1)
 
-## Sidebar - option
+## Sidebar - box selection
 option = st.sidebar.selectbox(
     'Select your choice',
      ['Attribute','Status'])
@@ -34,15 +36,16 @@ if option=='Attribute':
     st.dataframe(overallpkmndata)
 
 else:
+    ## Declare
     min_speed = int(newpkmndata['Speed'].min())
     max_speed = int(newpkmndata['Speed'].max())
-    
     min_hp = int(newpkmndata['HP'].min())
     max_hp = int(newpkmndata['HP'].max())
  
     Hp = st.sidebar.slider('HP', min_hp, max_hp)
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
     
+    ## Display
     'By HP'
     data = newpkmndata[newpkmndata['HP'] == Hp]
     st.write('Data Dimension: ' + str(data.shape[0]) + ' rows and ' + str(data.shape[1]) + ' columns.')
