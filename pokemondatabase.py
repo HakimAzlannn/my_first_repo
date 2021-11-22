@@ -35,6 +35,6 @@ if option=='Attribute':
 else:
     min_speed = int(newpkmndata['Speed'].min())
     max_speed = int(newpkmndata['Speed'].max())
-    '# By speed'
-    speed = st.slider('Speed', min_speed, max_speed)
+    'By speed'
+    speed = st.sidebar.slider('Speed', min_speed, max_speed)
     newpkmndata[newpkmndata['Speed'] == speed]
