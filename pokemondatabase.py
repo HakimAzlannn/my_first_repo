@@ -35,6 +35,5 @@ You can use the sidebar button!
 """)
 pkmn_name = st.text_input('Your pokemon')
 st.write(pd.DataFrame({
-        'Intplan': ['yes', 'yes', 'yes', 'no'],
-        'Churn Status': [0, 0, 0, 1]
+        pkmn_name:pd.read_csv(pkmndata)
         }))
