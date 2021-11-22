@@ -32,23 +32,11 @@ st.dataframe(overallpkmndata)
 
 @st.cache
 def get_data():
-    return pd.read_csv('https://datahub.io/core/gdp/r/gdp.csv')
-
-
-'# World GDP'
+    return pd.read_csv('pokemon.csv')
 
 df = get_data()
-
-min_year = int(df['Year'].min())
-max_year = int(df['Year'].max())
-
-countries = df['Country Name'].unique()
-
-'## By country'
-country = st.selectbox('Country', countries)
-df[df['Country Name'] == country]
-
-
-'## By year'
-year = st.slider('Year', min_year, max_year)
-df[df['Year'] == year]
+min_speed = int(df['Speed'].min())
+max_speed = int(df['Speed'].max())
+'## By speed'
+speed = st.slider('Speed', min_speed, max_speed)
+df[df['Speed'] == speed]
