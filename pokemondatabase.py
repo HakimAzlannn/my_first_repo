@@ -28,3 +28,27 @@ selected_legendary = st.sidebar.multiselect('Legendary', Legendarytype, Legendar
 overallpkmndata = newpkmndata[(pkmndata.Legendary.isin(selected_legendary)) & (pkmndata.Type1.isin(type_1_selection))]
 st.write('Data Dimension: ' + str(overallpkmndata.shape[0]) + ' rows and ' + str(overallpkmndata.shape[1]) + ' columns.')
 st.dataframe(overallpkmndata)
+
+
+@st.cache
+def get_data():
+    return pd.read_csv('https://datahub.io/core/gdp/r/gdp.csv')
+
+
+'# World GDP'
+
+df = get_data()
+
+min_year = int(df['Year'].min())
+max_year = int(df['Year'].max())
+
+countries = df['Country Name'].unique()
+
+'## By country'
+country = st.selectbox('Country', countries)
+df[df['Country Name'] == country]
+
+
+'## By year'
+year = st.slider('Year', min_year, max_year)
+df[df['Year'] == year]
