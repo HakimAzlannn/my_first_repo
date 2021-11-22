@@ -41,6 +41,5 @@ else:
  
     Hp = st.sidebar.slider('HP', min_hp, max_hp)
     speed = st.sidebar.slider('Speed', min_speed, max_speed)
-    data = newpkmndata[newpkmndata['HP'] == Hp] & newpkmndata[newpkmndata['Speed'] == speed]
-        
-    st.write(data)
+    newpkmndata[newpkmndata['HP'] == Hp]
+    newpkmndata[newpkmndata['Speed'] == speed]
