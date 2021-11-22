@@ -32,7 +32,7 @@ if option=='Attribute':
     st.write('Data Dimension: ' + str(overallpkmndata.shape[0]) + ' rows and ' + str(overallpkmndata.shape[1]) + ' columns.')
     st.dataframe(overallpkmndata)
 
-else option=='Status':
+else:
     min_speed = int(newpkmndata['Speed'].min())
     max_speed = int(newpkmndata['Speed'].max())
     '# By speed'
