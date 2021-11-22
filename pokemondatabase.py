@@ -2,20 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F157063105734740205%2F&psig=AOvVaw1vEF3uIb2Qp5n_x0HKvgay&ust=1637658379929000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjpmYLPq_QCFQAAAAAdAAAAABAD")
-    }
-   .sidebar .sidebar-content {
-        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F157063105734740205%2F&psig=AOvVaw1vEF3uIb2Qp5n_x0HKvgay&ust=1637658379929000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjpmYLPq_QCFQAAAAAdAAAAABAD")
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
+[theme]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
 
 ## Set title
 st.title('Pokemon Database')
