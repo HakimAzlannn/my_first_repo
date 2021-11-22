@@ -6,7 +6,7 @@ st.title('Pokemon Database')
 
 st.markdown("""
 This app shows the stats of pokemon!
-* **Pokemon database reference:** [Click here](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6).
+* **Pokemon database reference:** [Click here](https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6)
 """)
 
 st.sidebar.header('Pokemon Attribute')
@@ -33,3 +33,13 @@ st.markdown("""
 You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
+
+while True:
+  pkmn_name = input("\nPlease enter your pokemon's name:\n")
+  
+    try:
+        pkmn_name = str(pkmn_name)
+        break
+    
+    except ValueError:
+        print("Sorry, no such pokemon")
