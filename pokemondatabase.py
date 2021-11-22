@@ -49,4 +49,6 @@ else:
     st.dataframe(data)
     
     'By Speed'
-    newpkmndata[newpkmndata['Speed'] == speed]
+    data2 = newpkmndata[newpkmndata['Speed'] == speed]
+    st.write('Data Dimension: ' + str(data2.shape[0]) + ' rows and ' + str(data2.shape[1]) + ' columns.')
+    st.dataframe(data2)
