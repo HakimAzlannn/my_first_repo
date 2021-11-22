@@ -33,4 +33,4 @@ st.markdown("""
 You can use the sidebar button!
 * Also you can search your pokemon here!
 """)
-pkmn_name = st.text_input('pokemon.csv')
+pkmn_name = st.text_input('Your pokemon')
