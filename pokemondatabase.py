@@ -32,11 +32,11 @@ st.dataframe(overallpkmndata)
 
 @st.cache
 def get_data():
-    return pd.read_csv('pokemon.csv')
+    return pd.read_csv('newpkmndata.csv')
 
 df = get_data()
 min_speed = int(df['Speed'].min())
 max_speed = int(df['Speed'].max())
-'## By speed'
+'By speed'
 speed = st.slider('Speed', min_speed, max_speed)
 df[df['Speed'] == speed]
